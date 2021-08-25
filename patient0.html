@@ -17,30 +17,20 @@ function pageback(){
     location.href="index.html";
 }
 
-$(function(){
-     $("IDcheck_morning").click(function(){
-        $.getJSON("drugdata.json",IDcheck_morning);
-    });
+$(function () {
+	 $("#IDcheck_morning").click(function(){
+					$.getJSON("drugdata.json", IDcheck1);
+				});
 });
-function IDcheck_morning(drugdata){
-            var IDmorning;
-            IDmorning = drugdata[0].id;
-            if(document.form1.morning_statuscheck.value==IDmorning){
-                Right = confirm("正しく確認できています。\n対象患者に薬剤を投与してください。");
-                if(Right == true){
-                    $("#status_morning").html("投与済みです")
-                }else{
-                    alert("キャンセルされました。");
-                }
-            }else{
-                Wrong = confirm("対象患者が間違っています！\nIDを再確認してください。");
-                if(Wrong == true){
-                    location.href="QR.html";
-                }else{
-                    alert("キャンセルされました。")
-                }
-            }
-        }
+function IDcheck1(drugdata){
+	var ID1;
+	ID1 = drugdata[0].id;
+    if( document.form1.morning_statuscheck.value==ID1){
+alert("正しく入力できています");
+    }else{
+alert("入力が間違っています");
+    }
+}
 </script>
 </head>
 
