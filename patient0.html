@@ -16,6 +16,31 @@ function display(drugdata){
 function pageback(){
     location.href="index.html";
 }
+
+$(function(){
+     $("IDcheck_morning").click(function(){
+        $.getJSON("drugdata.json",IDcheck_morning);
+    });
+});
+function IDcheck_morning(drugdata){
+            var ID;
+            ID = drugdata[0].ID;
+            if(document.form1.morning_statuscheck.value==ID){
+                Right = confirm("正しく確認できています。\n対象患者に薬剤を投与してください。");
+                if(Right == true){
+                    $("#status_morning").html(投与済みです)
+                }else{
+                    alert("キャンセルされました。");
+                }
+            }else{
+                Wrong = confirm("対象患者が間違っています！\nIDを再確認してください。");
+                if(Wrong == true){
+                    location.href="QR.html";
+                }else{
+                    alert("キャンセルされました。")
+                }
+            }
+        }
 </script>
 </head>
 
@@ -28,7 +53,7 @@ function pageback(){
     <div class="main">
     <br>
     <table border="1">
-        <caption>患者情報</caption>
+        <caption>与薬情報</caption>
         <tr>
             <th colspan="2">氏名</th>
         </tr>
@@ -52,7 +77,41 @@ function pageback(){
     </div>
 
     <div>
-
+    <form name="form1">
+        <table>
+            <caption>QRコード認証</caption>
+            <tr>
+                <th colspan="2">朝食後</th>
+            </tr>
+            <tr>
+                <td colspan="2"><a href="qr.html" class="btn_home">QRを読み取る</a></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="morning_statuscheck" placeholder="IDを入力または貼り付けて下さい" inputmode="numeric" pattern="\d*"></td>
+                <td><button id="IDcheck_morning" class="btn_ID">IDを確認する</button></td>
+            </tr>
+            <tr>
+                <th colspan="2">昼食後</th>
+            </tr>
+            <tr>
+                <td colspan="2"><a href="qr.html" class="btn_home">QRを読み取る</a></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="noon_statuscheck" placeholder="IDを入力または貼り付けて下さい" inputmode="numeric" pattern="\d*"></td>
+                <td><button id="IDcheck_noon" class="btn_ID">IDを確認する</button></td>
+            </tr>
+            <tr>
+                <th colspan="2">夕食後</th>
+            </tr>
+            <tr>
+                <td colspan="2"><a href="qr.html" class="btn_home">QRを読み取る</a></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="night_statuscheck" placeholder="IDを入力または貼り付けて下さい" inputmode="numeric" pattern="\d*"></td>
+                <td><button id="IDcheck_night" class="btn_ID">IDを確認する</button></td>
+            </tr>
+        </table>
+    </form>
     </div>
 
     <footer>
