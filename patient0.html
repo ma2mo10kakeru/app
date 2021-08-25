@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <title>patient0</title>
+    <link rel="stylesheet" href="./css/system.css" />
+
+<script type="text/javascript">
+ $(function(){
+    $.getJSON("drugdata.json",display);
+　});
+function display(drugdata){
+    $("#p0_name").html(drugdata[0].name);
+};
+function pageback(){
+    location.href="index.html";
+}
+</script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <p class="title">与薬情報システム</p>
+        </header>
+        
+    <div class="main">
+    <br>
+    <table border="1">
+        <caption>患者情報</caption>
+        <tr>
+            <th colspan="2">氏名</th>
+        </tr>
+        <tr>
+            <td colspan="2" id="p0_name"></td>
+        </tr>
+        <tr>
+            <th>投与時間</th><th>ステータス</th>
+        </tr>
+        <tr>
+            <td><a href="p0_morning.html" class="btn_home">朝</a></td><td id="status_morning">未投与</td>
+        </tr>
+        <tr>
+            <td><a href="p0_noon.html" class="btn_home">昼</a></td><td id="status_noon">未投与</td>
+        </tr>
+        <tr>
+            <td><a href="p0_night.html" class="btn_home">夜</a></td><td id="status_night">未投与</td>
+        </tr>
+    </table>
+    <br>
+    </div>
+
+    <div>
+
+    </div>
+
+    <footer>
+        <a href="index.html" class="btn-stitch">もどる</a>
+    </footer>
+
+    </div>
+</body>
+</html>
