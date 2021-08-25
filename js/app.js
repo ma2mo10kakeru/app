@@ -112,7 +112,7 @@ SQR.modal = (() => {
      * モーダルを閉じてQR読み込みを再開
      */
     const close = () => {
-        location.href="index.html";
+        history.back()
     }
 
     const copyResultText = () => {
