@@ -33,7 +33,12 @@ function IDcheck1(drugdata){
                     alert("キャンセルされました。");
                 }
     }else{
-alert("入力が間違っています");
+        Wrong = confirm("対象患者が間違っています！\n患者IDを再確認してください。");
+                if(Wrong == true){
+                    location.href="qr.html";
+                }else{
+                    alert("キャンセルされました。")
+                }
     }
 }
 </script>
