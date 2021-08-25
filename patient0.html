@@ -28,7 +28,7 @@ function IDcheck1(drugdata){
     if( document.form1.morning_statuscheck.value==ID1){
         Right = confirm("正しく確認できています。\n対象患者に薬剤を投与してください。");
                 if(Right == true){
-                    location.href="patient0.html";
+                    $("#status_morning").html("投与済みです");
                 }else{
                     alert("キャンセルされました。");
                 }
