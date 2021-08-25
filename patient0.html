@@ -26,7 +26,12 @@ function IDcheck1(drugdata){
 	var ID1;
 	ID1 = drugdata[0].id;
     if( document.form1.morning_statuscheck.value==ID1){
-alert("正しく入力できています");
+        Right = confirm("正しく確認できています。\n対象患者に薬剤を投与してください。");
+                if(Right == true){
+                    location.href="patient0.html";
+                }else{
+                    alert("キャンセルされました。");
+                }
     }else{
 alert("入力が間違っています");
     }
