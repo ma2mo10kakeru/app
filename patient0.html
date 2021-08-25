@@ -23,8 +23,8 @@ $(function(){
     });
 });
 function IDcheck_morning(drugdata){
-            var ID;
-            ID = drugdata[0].id;
+            var IDmorning;
+            IDmorning = drugdata[0].id;
             if(document.form1.morning_statuscheck.value==ID){
                 Right = confirm("正しく確認できています。\n対象患者に薬剤を投与してください。");
                 if(Right == true){
@@ -88,7 +88,7 @@ function IDcheck_morning(drugdata){
             </tr>
             <tr>
                 <td><input type="text" id="morning_statuscheck" placeholder="IDを入力または貼り付けて下さい" inputmode="numeric" pattern="\d*"></td>
-                <td><button id="IDcheck_morning" class="btn_ID">IDを確認する</button></td>
+                <td><input type="button" value="確認する" id="IDcheck_morning"></td>
             </tr>
             <tr>
                 <th colspan="2">昼食後</th>
