@@ -73,7 +73,7 @@ $(function () {
 function IDcheck3(drugdata){
 	var ID3;
 	ID3 = drugdata[0].id;
-    if( document.form3.noon_statuscheck.value==ID3){
+    if( document.form3.night_statuscheck.value==ID3){
         Right = confirm("正しく確認できています。\n対象患者に薬剤を投与してください。");
                 if(Right == true){
                     $("#status_night").html("投与済みです");
@@ -133,7 +133,7 @@ function IDcheck3(drugdata){
         <tr>
             <form name="form1">
             <td><input type="text" id="morning_statuscheck" placeholder="IDを入力または貼り付けて下さい" inputmode="numeric" pattern="\d*"></td>
-            <td><input type="button" value="IDを確認する" id="IDcheck_morning"></td>
+            <td><input type="button" value="IDを確認" id="IDcheck_morning"></td>
             </form>
         </tr>
         <tr>
@@ -145,7 +145,7 @@ function IDcheck3(drugdata){
         <tr>
             <form name="form2">
             <td><input type="text" id="noon_statuscheck" placeholder="IDを入力または貼り付けて下さい" inputmode="numeric" pattern="\d*"></td>
-            <td><input type="button" value="IDを確認する" id="IDcheck_noon"></td>
+            <td><input type="button" value="IDを確認" id="IDcheck_noon"></td>
             </form>
         </tr>
         <tr>
@@ -157,7 +157,7 @@ function IDcheck3(drugdata){
         <tr>
             <form name="form3">
             <td><input type="text" id="night_statuscheck" placeholder="IDを入力または貼り付けて下さい" inputmode="numeric" pattern="\d*"></td>
-            <td><input type="button" value="IDを確認する" id="IDcheck_night"></td>
+            <td><input type="button" value="IDを確認" id="IDcheck_night"></td>
             </form>
         </tr>
     </table>
