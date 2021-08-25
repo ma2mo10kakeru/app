@@ -49,7 +49,7 @@ $(function () {
 function IDcheck2(drugdata){
 	var ID2;
 	ID2 = drugdata[0].id;
-    if( document.form1.noon_statuscheck.value==ID2){
+    if( document.form2.noon_statuscheck.value==ID2){
         Right = confirm("正しく確認できています。\n対象患者に薬剤を投与してください。");
                 if(Right == true){
                     $("#status_noon").html("投与済みです");
@@ -73,7 +73,7 @@ $(function () {
 function IDcheck3(drugdata){
 	var ID3;
 	ID3 = drugdata[0].id;
-    if( document.form1.noon_statuscheck.value==ID3){
+    if( document.form3.noon_statuscheck.value==ID3){
         Right = confirm("正しく確認できています。\n対象患者に薬剤を投与してください。");
                 if(Right == true){
                     $("#status_night").html("投与済みです");
@@ -133,7 +133,7 @@ function IDcheck3(drugdata){
         <tr>
             <form name="form1">
             <td><input type="text" id="morning_statuscheck" placeholder="IDを入力または貼り付けて下さい" inputmode="numeric" pattern="\d*"></td>
-            <td><input type="button" value="確認する" id="IDcheck_morning"></td>
+            <td><input type="button" value="IDを確認する" id="IDcheck_morning"></td>
             </form>
         </tr>
         <tr>
@@ -143,8 +143,10 @@ function IDcheck3(drugdata){
             <td colspan="2"><a href="qr.html" class="btn_home">QRを読み取る</a></td>
         </tr>
         <tr>
+            <form name="form2">
             <td><input type="text" id="noon_statuscheck" placeholder="IDを入力または貼り付けて下さい" inputmode="numeric" pattern="\d*"></td>
-            <td><button id="IDcheck_noon" class="btn_ID">IDを確認する</button></td>
+            <td><input type="button" value="IDを確認する" id="IDcheck_noon"></td>
+            </form>
         </tr>
         <tr>
             <th colspan="2">夕食後</th>
@@ -153,8 +155,10 @@ function IDcheck3(drugdata){
             <td colspan="2"><a href="qr.html" class="btn_home">QRを読み取る</a></td>
         </tr>
         <tr>
+            <form name="form3">
             <td><input type="text" id="night_statuscheck" placeholder="IDを入力または貼り付けて下さい" inputmode="numeric" pattern="\d*"></td>
-            <td><button id="IDcheck_night" class="btn_ID">IDを確認する</button></td>
+            <td><input type="button" value="IDを確認する" id="IDcheck_night"></td>
+            </form>
         </tr>
     </table>
     </div>
