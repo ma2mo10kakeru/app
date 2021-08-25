@@ -1,5 +1,5 @@
 /*リスト*/
-table{
+table.list{
     margin: 5px;
     margin-left: auto;
     margin-right: auto;
@@ -10,14 +10,37 @@ table{
     border-collapse: collapse;
     border: solid 2px #668ad8;
 }
-table th{
+table.list th{
     padding: 10px;
     color: black;
     background-color: lightblue;
 }
-table td{
+table.list td{
     padding: 10px;
     background-color: white;
+}
+/*リスト*/
+
+/*リスト*/
+table.IDlist{
+  margin: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  table-layout: fixed;
+  font-size: 25pt;
+  width: 98%;
+  text-align: center;
+  border-collapse: collapse;
+  border: solid 2px rgb(252, 166, 181);
+}
+table.IDlist th{
+  padding: 10px;
+  color: black;
+  background-color: lightpink;
+}
+table.IDlist td{
+  padding: 10px;
+  background-color: white;
 }
 /*リスト*/
 
