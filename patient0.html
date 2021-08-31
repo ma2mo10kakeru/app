@@ -80,7 +80,11 @@ function display(drugdata){
 
 $(function () {
 	 $("#IDcheck_morning").click(function(){
-					$.getJSON("drugdata.json", IDcheck1);
+         if(status0 = "確認済み"){
+            $.getJSON("drugdata.json", IDcheck1);
+         }else{
+             alert("与薬情報を確認してから実行してください！")
+         }		
 				});
 });
 function IDcheck1(drugdata){
@@ -104,7 +108,7 @@ function IDcheck1(drugdata){
     }
 }
 $(function () {
-	 $("#IDcheck_noon").click(function(){
+        $("#IDcheck_noon").click(function(){
 					$.getJSON("drugdata.json", IDcheck2);
 				});
 });
