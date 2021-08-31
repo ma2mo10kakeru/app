@@ -158,12 +158,19 @@ section {
 /*確認するボタン*/
 
 /*テキストフィールド*/
-input[type="text"]{
+input[type="text"].inDOSE{
     width: 80%;
     height: 100%;
     padding: 1px;
     font-size: 30px;
     text-align: center;
+}
+input[type="text"].inID{
+  width: 60%;
+  height: 100%;
+  padding: 1px;
+  font-size: 30px;
+  text-align: center;
 }
 /*テキストフィールド*/
 
