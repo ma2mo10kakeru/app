@@ -183,8 +183,10 @@ input[type="button"]{
   font-size: 30px;
   width: 40%;
   background-color: lightpink;
-  margin-right: auto;
   margin: 15px;
+}
+.button_wrapper{
+  text-align:center;
 }
 /*リセットボタン*/
 
