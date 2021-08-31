@@ -24,6 +24,18 @@ function display(drugdata){
     $("#p4_age").html(drugdata[4].age);
 };
 //テーブル作成
+
+//LocalStorageリセット
+function reset(){
+    Reset = confirm("全患者の投与状態をリセットします\nよろしいですか？");
+    if(Reset == true){
+        localStorage.clear();
+        alert("ステータスがリセットされました")
+    }else{
+        alert("キャンセルされました")
+    }
+}
+//LocalStorageリセット
 </script>
 
 </head>
@@ -56,6 +68,7 @@ function display(drugdata){
         <td id="p4_name"></td><td id="p4_age"></td><td><a href="patient4.html" class="btn_home">患者画面へ<span></span></a></td>
     </tr>
 </table>
+<button onclick="reset()">投与状況をリセットする</button>
 <br>
 </div>
 
