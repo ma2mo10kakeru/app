@@ -114,7 +114,7 @@ function IDcheck2(drugdata){
     if( document.form2.noon_statuscheck.value==ID2){
         Right = confirm("正しく確認できています。\n対象患者に薬剤を投与してください。");
                 if(Right == true){
-                    localStorage.setItem(P0_STASUS1,"投与済み");
+                    localStorage.setItem(P0_STATUS1,"投与済み");
                     document.getElementById("status_noon").innerText = "投与済み";
                 }else{
                     alert("キャンセルされました。");
