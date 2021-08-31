@@ -159,10 +159,11 @@ section {
 
 /*テキストフィールド*/
 input[type="text"]{
-    width: 100%;
+    width: 80%;
     height: 100%;
     padding: 1px;
     font-size: 30px;
+    text-align: center;
 }
 /*テキストフィールド*/
 
