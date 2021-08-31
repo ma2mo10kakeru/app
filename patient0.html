@@ -80,7 +80,7 @@ function display(drugdata){
 
 $(function () {
 	 $("#IDcheck_morning").click(function(){
-         if(status0 = "確認済み"){
+         if(P0_STATUS0 = "確認済み"){
             $.getJSON("drugdata.json", IDcheck1);
          }else{
              alert("与薬情報を確認してから実行してください！")
