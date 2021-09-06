@@ -9,10 +9,6 @@ table.list{
     text-align: center;
     border-collapse: collapse;
     border: solid 2px #668ad8;
-    border-radius: 10px;
-    border-collapse: separate;
-    border-spacing: 0;
-    overflow: hidden;
 }
 table.list th{
     padding: 10px;
