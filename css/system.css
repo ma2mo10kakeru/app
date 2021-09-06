@@ -137,7 +137,7 @@ section {
     text-decoration: none;
     background: #668ad8;
     color: #FFF;
-    border-radius: 4px;
+    border-radius: 30px;
     box-shadow: 0px 0px 0px 5px #668ad8;
     border: dashed 1px #FFF;
   }
@@ -159,7 +159,7 @@ section {
   text-decoration: none;
   background: #668ad8;
   color: #FFF;
-  border-radius: 4px;
+  border-radius: 30px;
   box-shadow: 0px 0px 0px 5px #668ad8;
   border: dashed 1px #FFF;
 }
