@@ -9,6 +9,10 @@ table.list{
     text-align: center;
     border-collapse: collapse;
     border: solid 2px #668ad8;
+    border-radius: 10px;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
 }
 table.list th{
     padding: 10px;
@@ -200,7 +204,7 @@ input[type="text"].inID{
   text-decoration: none;
   color: #000000;
   border: double 4px #000000;
-  border-radius: 20px;
+  border-radius: 25px;
   font-size: 25px;
   padding-left: 10px;
   padding-right: 10px;
