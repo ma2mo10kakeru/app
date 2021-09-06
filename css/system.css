@@ -44,6 +44,8 @@ table.IDlist td{
 }
 /*リスト*/
 
+/*
+ボタン初期化
 button {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -52,6 +54,7 @@ button {
   border-radius: 0;
   background: #ccc;
 }
+*/
 
 /*基本ボタン*/
 section {
@@ -200,7 +203,6 @@ input[type="text"].inID{
   color: #000000;
   border: double 4px #000000;
   border-radius: 20px;
-  transition: .4s;
   font-size: 20px;
   margin: 10px;
 }
