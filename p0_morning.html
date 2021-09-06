@@ -12,7 +12,7 @@
         });
         function display(drugdata){
             $("#p0_name").html(drugdata[0].name);
-            $("#p0morning_dn").html(
+            $("#p0morning_dn1").html(
                 drugdata[0].morning.drugname[0]+"<br>"+
                 drugdata[0].morning.drugname[1]+"<br>"+
                 drugdata[0].morning.drugname[2]+"<br>"+
@@ -25,12 +25,18 @@
                 drugdata[0].morning.drugdose[3]+"<br>"+
                 drugdata[0].morning.drugdose[4]
             )
+            $("#p0morning_dn2").html(
+                drugdata[0].morning.drugname[0]+"<br>"+
+                drugdata[0].morning.drugname[1]+"<br>"+
+                drugdata[0].morning.drugname[2]+"<br>"+
+                drugdata[0].morning.drugname[3]+"<br>"+
+                drugdata[0].morning.drugname[4])
             $("#p0morning_p").html(
-                drugdata[0].morning.drugname[0]+"："+drugdata[0].morning.purpose[0]+"<br>"+
-                drugdata[0].morning.drugname[1]+"："+drugdata[0].morning.purpose[1]+"<br>"+
-                drugdata[0].morning.drugname[2]+"："+drugdata[0].morning.purpose[2]+"<br>"+
-                drugdata[0].morning.drugname[3]+"："+drugdata[0].morning.purpose[3]+"<br>"+
-                drugdata[0].morning.drugname[4]+"："+drugdata[0].morning.purpose[4]
+                drugdata[0].morning.purpose[0]+"<br>"+
+                drugdata[0].morning.purpose[1]+"<br>"+
+                drugdata[0].morning.purpose[2]+"<br>"+
+                drugdata[0].morning.purpose[3]+"<br>"+
+                drugdata[0].morning.purpose[4]
             )
             $("#p0morning_n").html(drugdata[0].morning.note)
             $("#p0morning_t").html(drugdata[0].morning.time)
@@ -64,13 +70,13 @@
             <th>処方薬</th><th>用量</th>
         </tr>
         <tr>
-            <td id="p0morning_dn"></td><td id="p0morning_dd"></td>
+            <td id="p0morning_dn1"></td><td id="p0morning_dd"></td>
         </tr>
         <tr>
             <th colspan="2">使用目的</th>
         </tr>
         <tr>
-            <td colspan="2" id="p0morning_p"></td>
+            <td id="p0morning_dn2"></td><td id="p0morning_p"></td>
         </tr>
         <tr>
             <th colspan="2">備考</th>
