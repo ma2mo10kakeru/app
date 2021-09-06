@@ -193,52 +193,20 @@ input[type="text"].inID{
 /*再確認ボタン*/
 
 /*ID確認ボタン*/
-.btn-IDcheck {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1;
+.btn-IDcheck{
+  display: inline-block;
+  padding: 0.5em 1em;
   text-decoration: none;
   color: #000000;
-  font-size: 20px;
+  border: double 4px #000000;
   border-radius: 20px;
-  width: 25%;
+  transition: .4s;
+  font-size: 30px;
+  width: 30%;
   height: 100%;
-  border: 1px solid #333333;
-  position: relative;
-  transition: 0.3s;
-  background-color: #FFFFFFFF;
 }
-
-.btn-IDcheck::before, .btn-IDcheck::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 50%;
-  right: 15px;
-  transform-origin: 100% 50%;
-  height: 1px;
-  width: 11px;
-  background-color: #333;
-  border-radius: 2px;
-  will-change: transform;
-  transition: .3s;
-}
-
-.btn-IDcheck::before {
-  transform: translateY(-50%) rotate(30deg);
-}
-
-.btn-IDcheck::after {
-  transform: translateY(-50%) rotate(-30deg);
-}
-
-.btn-IDcheck:hover::before {
-  transform: translate(5px, -50%) rotate(30deg);
-}
-
-.btn-IDcheck:hover::after {
-  transform: translate(5px, -50%) rotate(-30deg);
+.btn-IDcheck{
+  background: #fffbef;
 }
 /*ID確認ボタン*/
 
