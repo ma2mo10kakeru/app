@@ -203,8 +203,8 @@ input[type="text"].inID{
   transition: .4s;
   font-size: 25px;
   width: 30%;
-  height: 60%;
-  margin: 15px;
+  height: 30%;
+  margin: 10px;
 }
 .btn-IDcheck{
   background: #fffbef;
