@@ -26,6 +26,7 @@
                 drugdata[0].morning.drugname[3]+"："+drugdata[0].morning.purpose[3]+"<br>"+
                 drugdata[0].morning.drugname[4]+"："+drugdata[0].morning.purpose[4]
             )
+            $("#p0morning_n").html(drugdata[0].morning.note)
             $("#p0morning_t").html(drugdata[0].morning.time)
         }
 
@@ -107,6 +108,12 @@
         </tr>
         <tr>
             <td colspan="2" id="p0morning_p"></td>
+        </tr>
+        <tr>
+            <th colspan="2">備考</th>
+        </tr>
+        <tr>
+            <td colspan="2" id="p0morning_n"></td>
         </tr>
         <tr>
             <th colspan="2">投与時刻</th>
