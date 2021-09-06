@@ -201,9 +201,7 @@ input[type="text"].inID{
   border: double 4px #000000;
   border-radius: 20px;
   transition: .4s;
-  font-size: 25px;
-  width: 20%;
-  height: 30%;
+  font-size: 20px;
   margin: 10px;
 }
 .btn-IDcheck{
