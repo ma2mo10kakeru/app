@@ -174,7 +174,7 @@ input[type="text"].inDOSE{
     text-align: center;
 }
 input[type="text"].inID{
-  width: 60%;
+  width: 50%;
   height: 100%;
   padding: 1px;
   font-size: 30px;
@@ -202,7 +202,7 @@ input[type="text"].inID{
   color: #000000;
   font-size: 20px;
   border-radius: 20px;
-  width: 30%;
+  width: 25%;
   height: 100%;
   border: 1px solid #333333;
   position: relative;
