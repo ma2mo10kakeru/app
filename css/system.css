@@ -214,8 +214,15 @@ input[type="text"].inID{
 
 /*リセットボタン*/
 .btn-reset{
-  border: 1px solid black;
-  border-radius: 0.3em;
+  text-decoration: none;
+  color: #000000;
+  border: double 4px #000000;
+  border-radius: 25px;
+  font-size: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 2px;
+  padding-bottom: 2px;
   font-size: 30px;
   width: 40%;
   background-color: lightpink;
