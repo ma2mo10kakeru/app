@@ -175,14 +175,14 @@ input[type="text"].inID{
 /*テキストフィールド*/
 
 /*再確認ボタン*/
-input[type="button"].btn-DRUGcheck{
+.btn-DRUGcheck{
   border: 1px solid black;
   border-radius: 0.3em;
   font-size: 30px;
   width: 40%;
   background-color: lightpink;
 }
-input[type="button"].btn-IDcheck{
+.btn-IDcheck{
   border: 1px solid black;
   border-radius: 0.3em;
   font-size: 30px;
