@@ -86,7 +86,11 @@ $(function () {
 function IDcheck1(drugdata){
     var ID1;
     ID1 = drugdata[0].id;
-    if(localStorage.hasOwnProperty(P0_STATUS0)){
+    var st0;
+    st0 = localStorage.getItem(P0_STATUS0);
+    if(st0 == null){
+        alert("与薬情報が未確認です！\n情報を確認してからIDチェックをして下さい！");
+    }else{
         if( document.form1.morning_statuscheck.value==ID1){
         Right = confirm("正しく確認できています。\n対象患者に薬剤を投与してください。");
                 if(Right == true){
@@ -95,13 +99,11 @@ function IDcheck1(drugdata){
                 }else{
                     alert("キャンセルされました。");
                 }
-    }else{
-        alert("対象患者が間違っています！\n患者IDを再確認してください。");
+        }else{
+            alert("対象患者が間違っています！\n患者IDを再確認してください。");
+        }
     }
-}else{
-    alert("与薬情報が未確認です！\n情報を確認してからIDを読み込んでください。")
 }
-    }
     
 $(function () {
         $("#IDcheck_noon").click(function(){
