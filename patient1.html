@@ -8,9 +8,9 @@
 
 <script type="text/javascript">
 //LocalStorageの入れ物//
-    var P1_STATUS0 = "P0_ST";
-    var P1_STATUS1 = "P1_ST";
-    var P1_STATUS2 = "P2_ST";
+    var P1_STATUS0 = "P1_ST0";
+    var P1_STATUS1 = "P1_ST1";
+    var P1_STATUS2 = "P1_ST2";
 
 //LocalStorage設定&画面表示//
     window.onload = function(){
@@ -23,9 +23,9 @@
     }
 
     function getStorage0(){
-        let st0 = localStorage.getItem(P1_STATUS0);
-        if(st0 !== null){
-            return st0;
+        let p1st0 = localStorage.getItem(P1_STATUS0);
+        if(p1st0 !== null){
+            return p1st0;
         }else{
             return "未投与";
         }
@@ -39,9 +39,9 @@
     }
 
     function getStorage1(){
-        let st1 = localStorage.getItem(P1_STATUS1);
-        if(st1 !== null){
-            return st1;
+        let p1st1 = localStorage.getItem(P1_STATUS1);
+        if(p1st1 !== null){
+            return p1st1;
         }else{
             return "未投与";
         }
@@ -55,9 +55,9 @@
     }
 
     function getStorage2(){
-        let st2 = localStorage.getItem(P1_STATUS2);
-        if(st2 !== null){
-            return st2;
+        let p1st2 = localStorage.getItem(P1_STATUS2);
+        if(p1st2 !== null){
+            return p1st2;
         }else{
             return "未投与";
         }
@@ -87,12 +87,12 @@ $(function () {
                 });
 });
 function IDcheck1(drugdata){
-    var ID0, st0;
+    var ID0, p1st0;
     ID0 = drugdata[1].id;
-    st0 = localStorage.getItem(P1_STATUS0);
-    if(st0 == "未投与"){
+    p1st0 = localStorage.getItem(P1_STATUS0);
+    if(p1st0 == "未投与"){
         alert("与薬情報が未確認です！\n情報を確認してからIDチェックをして下さい！");
-    }else if(st0 == "投与済み"){
+    }else if(p1st0 == "投与済み"){
         alert("すでに投与されています");
     }else{
         if(document.form1.morning_statuscheck.value==ID0){
@@ -117,12 +117,12 @@ $(function () {
 				});
 });
 function IDcheck2(drugdata){
-    var ID1, st1;
+    var ID1, p1st1;
     ID1 = drugdata[1].id;
-    st1 = localStorage.getItem(P1_STATUS1);
-    if(st1 == "未投与"){
+    p1st1 = localStorage.getItem(P1_STATUS1);
+    if(p1st1 == "未投与"){
         alert("与薬情報が未確認です！\n情報を確認してからIDチェックをして下さい！");
-    }else if(st1 == "投与済み"){
+    }else if(p1st1 == "投与済み"){
         alert("すでに投与されています");
     }else{
         if(document.form2.noon_statuscheck.value==ID1){
@@ -147,12 +147,12 @@ $(function () {
 				});
 });
 function IDcheck3(drugdata){
-    var ID2, st2;
+    var ID2, p1st2;
     ID2 = drugdata[1].id;
-    st2 = localStorage.getItem(P1_STATUS2);
-    if(st2 == "未投与"){
+    p1st2 = localStorage.getItem(P1_STATUS2);
+    if(p1st2 == "未投与"){
         alert("与薬情報が未確認です！\n情報を確認してからIDチェックをして下さい！");
-    }else if(st2 == "投与済み"){
+    }else if(p1st2 == "投与済み"){
         alert("すでに投与されています");
     }else{
         if(document.form3.night_statuscheck.value==ID2){
