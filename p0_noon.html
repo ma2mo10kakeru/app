@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/system.css" />
 
     <script>
+    //JSON読み込み＆画面表示//
         $(function(){
             $.getJSON("drugdata.json",display);
         });
@@ -25,12 +26,6 @@
                 drugdata[0].noon.drugdose[3]+"<br>"+
                 drugdata[0].noon.drugdose[4]
             )
-            $("#p0noon_dn1").html(
-                drugdata[0].noon.drugname[0]+"<br>"+
-                drugdata[0].noon.drugname[1]+"<br>"+
-                drugdata[0].noon.drugname[2]+"<br>"+
-                drugdata[0].noon.drugname[3]+"<br>"+
-                drugdata[0].noon.drugname[4])
             $("#p0noon_dn2").html(
                 drugdata[0].noon.drugname[0]+"<br>"+
                 drugdata[0].noon.drugname[1]+"<br>"+
@@ -47,6 +42,7 @@
             $("#p0noon_n").html(drugdata[0].noon.note)
             $("#p0noon_t").html(drugdata[0].noon.time)
         }
+    //JSON読み込み＆画面表示//
     </script>
 </head>
 <body>
@@ -90,7 +86,7 @@
         <tr>
             <td colspan="2" id="p0noon_t"></td>
         </tr>
-    </table><br>
+    </table>
     </div>
 
     <footer>
