@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/system.css" />
 
     <script>
+    //JSON読み込み＆画面表示//
         $(function(){
             $.getJSON("drugdata.json",display);
         });
@@ -41,10 +42,12 @@
             $("#p0morning_n").html(drugdata[0].morning.note)
             $("#p0morning_t").html(drugdata[0].morning.time)
         }
+    //JSON読み込み＆画面表示//
     </script>
 </head>
 <body>
     <div class="container">
+
         <header>
             <p class="title">与薬情報システム</p>
         </header>
@@ -84,7 +87,6 @@
             <td colspan="2" id="p0morning_t"></td>
         </tr>
     </table>
-    <br>
     </div>
 
     <footer>
