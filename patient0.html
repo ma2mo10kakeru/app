@@ -84,21 +84,22 @@ $(function () {
                 });
 });
 function IDcheck1(drugdata){
-    var ID0;
+    var ID0, st0;
     ID0 = drugdata[0].id;
-    var st0;
     st0 = localStorage.getItem(P0_STATUS0);
     if(st0 == "未投与"){
         alert("与薬情報が未確認です！\n情報を確認してからIDチェックをして下さい！");
+    }else if(st0 == "投与済み"){
+        alert("すでに投与されています");
     }else{
-        if( document.form1.morning_statuscheck.value==ID0){
-        Right = confirm("正しく確認できています。\n対象患者に薬剤を投与してください。");
-                if(Right == true){
-                    localStorage.setItem(P0_STATUS0,"投与済み");
-                    document.getElementById("status_morning").innerText = "投与済み";
-                }else{
-                    alert("キャンセルされました。");
-                }
+        if(document.form1.morning_statuscheck.value==ID0){
+            Right = confirm("正しく確認できています。\n対象患者に薬剤を投与してください。");
+            if(Right == true){
+                localStorage.setItem(P0_STATUS0,"投与済み");
+                document.getElementById("status_morning").innerText = "投与済み";
+            }else{
+                alert("キャンセルされました");
+            }
         }else{
             alert("対象患者が間違っています！\n患者IDを再確認してください。");
         }
@@ -111,21 +112,22 @@ $(function () {
 				});
 });
 function IDcheck2(drugdata){
-    var ID1;
+    var ID1, st1;
     ID1 = drugdata[0].id;
-    var st1;
     st1 = localStorage.getItem(P0_STATUS1);
     if(st1 == "未投与"){
         alert("与薬情報が未確認です！\n情報を確認してからIDチェックをして下さい！");
+    }else if(st1 == "投与済み"){
+        alert("すでに投与されています");
     }else{
-        if( document.form1.morning_statuscheck.value==ID1){
-        Right = confirm("正しく確認できています。\n対象患者に薬剤を投与してください。");
-                if(Right == true){
-                    localStorage.setItem(P0_STATUS1,"投与済み");
-                    document.getElementById("status_morning").innerText = "投与済み";
-                }else{
-                    alert("キャンセルされました。");
-                }
+        if(document.form1.morning_statuscheck.value==ID1){
+            Right = confirm("正しく確認できています。\n対象患者に薬剤を投与してください。");
+            if(Right == true){
+                localStorage.setItem(P0_STATUS1,"投与済み");
+                document.getElementById("status_morning").innerText = "投与済み";
+            }else{
+                alert("キャンセルされました");
+            }
         }else{
             alert("対象患者が間違っています！\n患者IDを再確認してください。");
         }
@@ -138,18 +140,25 @@ $(function () {
 				});
 });
 function IDcheck3(drugdata){
-	var ID3;
-	ID3 = drugdata[0].id;
-    if( document.form3.night_statuscheck.value==ID3){
-        Right = confirm("正しく確認できています。\n対象患者に薬剤を投与してください。");
-                if(Right == true){
-                    localStorage.setItem(P0_STATUS2,"投与済み");
-                    document.getElementById("status_night").innerText = "投与済み";
-                }else{
-                    alert("キャンセルされました。");
-                }
+    var ID2, st2;
+    ID2 = drugdata[0].id;
+    st2 = localStorage.getItem(P0_STATUS2);
+    if(st2 == "未投与"){
+        alert("与薬情報が未確認です！\n情報を確認してからIDチェックをして下さい！");
+    }else if(st2 == "投与済み"){
+        alert("すでに投与されています");
     }else{
-        alert("対象患者が間違っています！\n患者IDを再確認してください。");
+        if(document.form1.morning_statuscheck.value==ID2){
+            Right = confirm("正しく確認できています。\n対象患者に薬剤を投与してください。");
+            if(Right == true){
+                localStorage.setItem(P0_STATUS2,"投与済み");
+                document.getElementById("status_morning").innerText = "投与済み";
+            }else{
+                alert("キャンセルされました");
+            }
+        }else{
+            alert("対象患者が間違っています！\n患者IDを再確認してください。");
+        }
     }
 }
 </script>
