@@ -125,7 +125,7 @@ function IDcheck2(drugdata){
     }else if(st1 == "投与済み"){
         alert("すでに投与されています");
     }else{
-        if(document.form1.morning_statuscheck.value==ID1){
+        if(document.form1.noon_statuscheck.value==ID1){
             Right = confirm("正しく確認できています。\n対象患者に薬剤を投与してください。");
             if(Right == true){
                 localStorage.setItem(P0_STATUS1,"投与済み");
@@ -155,7 +155,7 @@ function IDcheck3(drugdata){
     }else if(st2 == "投与済み"){
         alert("すでに投与されています");
     }else{
-        if(document.form1.morning_statuscheck.value==ID2){
+        if(document.form1.night_statuscheck.value==ID2){
             Right = confirm("正しく確認できています。\n対象患者に薬剤を投与してください。");
             if(Right == true){
                 localStorage.setItem(P0_STATUS2,"投与済み");
