@@ -88,7 +88,7 @@ function IDcheck1(drugdata){
     ID1 = drugdata[0].id;
     var st0;
     st0 = localStorage.getItem(P0_STATUS0);
-    if(st0 == null){
+    if(st0 == "未投与"){
         alert("与薬情報が未確認です！\n情報を確認してからIDチェックをして下さい！");
     }else{
         if( document.form1.morning_statuscheck.value==ID1){
