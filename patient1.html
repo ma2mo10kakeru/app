@@ -14,12 +14,12 @@
 
 //LocalStorage設定&画面表示//
     window.onload = function(){
-        let status0 = getStorage0();
-        setStatus0(status0);
-        let status1 = getStorage1();
-        setStatus1(status1);
-        let status2 = getStorage2();
-        setStatus2(status2);
+        let p1status0 = getStorage0();
+        setStatus0(p1status0);
+        let p1status1 = getStorage1();
+        setStatus1(p1status1);
+        let p1status2 = getStorage2();
+        setStatus2(p1status2);
     }
 
     function getStorage0(){
@@ -30,12 +30,12 @@
             return "未投与";
         }
     }
-    function setStatus0(status0){
-        document.getElementById("status_morning").innerText = status0;
-        setStorage0(status0);
+    function setStatus0(p1status0){
+        document.getElementById("status_morning").innerText = p1status0;
+        setStorage0(p1status0);
     }
-    function setStorage0(status0){
-        localStorage.setItem(P1_STATUS0,status0);
+    function setStorage0(p1status0){
+        localStorage.setItem(P1_STATUS0,p1status0);
     }
 
     function getStorage1(){
@@ -46,12 +46,12 @@
             return "未投与";
         }
     }
-    function setStatus1(status1){
-        document.getElementById("status_noon").innerText = status1;
-        setStorage1(status1);
+    function setStatus1(p1status1){
+        document.getElementById("status_noon").innerText = p1status1;
+        setStorage1(p1status1);
     }
-    function setStorage1(status1){
-        localStorage.setItem(P1_STATUS1,status1);
+    function setStorage1(p1status1){
+        localStorage.setItem(P1_STATUS1,p1status1);
     }
 
     function getStorage2(){
@@ -62,12 +62,12 @@
             return "未投与";
         }
     }
-    function setStatus2(status2){
-        document.getElementById("status_night").innerText = status2;
-        setStorage2(status2);
+    function setStatus2(p1status2){
+        document.getElementById("status_night").innerText = p1status2;
+        setStorage2(p1status2);
     }
-    function setStorage2(status2){
-        localStorage.setItem(P1_STATUS2,status2);
+    function setStorage2(p1status2){
+        localStorage.setItem(P1_STATUS2,p1status2);
     }
 //LocalStorage設定&画面表示//
 
