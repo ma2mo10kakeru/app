@@ -76,7 +76,7 @@
     $.getJSON("drugdata.json",display);
 　});
 function display(drugdata){
-    $("#p0_name").html(drugdata[0].name);
+    $("#p_name").html(drugdata[0].name);
 };
 //JSON読み込み//
 
@@ -186,7 +186,7 @@ function IDcheck3(drugdata){
             <th colspan="2">氏名</th>
         </tr>
         <tr>
-            <td colspan="2" id="p0_name"></td>
+            <td colspan="2" id="p_name"></td>
         </tr>
         <tr>
             <th>投与時間</th><th>ステータス</th>
