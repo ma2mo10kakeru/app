@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="./css/system.css" />
 
     <script type="text/javascript">
-　　　　var P0_STATUS0 = "P0_ST";
+        //LocalStorageの入れ物//
+        var P0_STATUS0 = "P0_ST";
 
+        //JSON読み込み＆画面表示//
         $(function(){
             $.getJSON("drugdata.json",display);
         });
@@ -35,7 +37,9 @@
             $("#p0morning_n").html(drugdata[0].morning.note)
             $("#p0morning_t").html(drugdata[0].morning.time)
         }
+        //JSON読み込み＆画面表示//
 
+        //用量チェック//
         $(function(){
             $("#check").click(function(){
                 $.getJSON("drugdata.json",check1);
@@ -65,9 +69,7 @@
                 }
             }
         }
-        function pageback(){
-            location.href="p0_morning.html";
-        }
+        //用量チェック//
     </script>
 </head>
 <body>
