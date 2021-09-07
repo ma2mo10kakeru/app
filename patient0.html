@@ -78,11 +78,13 @@ function display(drugdata){
     $("#p0_name").html(drugdata[0].name);
 };
 
-$(function () {
-	 $("#IDcheck_morning").click(function(){
-            $.getJSON("drugdata.json", IDcheck1);	
-				});
-});
+function IDcheck_morning(){
+    if(localStorage.hasOwnProperty(P0_STATUS0)){
+        $.getJSON("drugdata.json", IDcheck1);
+    }else{
+        alert("与薬情報が未確認です！\n確認をしてからIDを読み取ってください。");
+    }
+}
 function IDcheck1(drugdata){
 	var ID1;
 	ID1 = drugdata[0].id;
@@ -182,7 +184,7 @@ function IDcheck3(drugdata){
         <tr>
             <form name="form1">
             <td colspan="2"><input type="text" id="morning_statuscheck" class="inID" placeholder="IDを入力または貼り付けて下さい" inputmode="url">
-            <button type="submit" id="IDcheck_morning" class="btn-IDcheck">IDを確認</button></td>
+            <button type="submit" id="IDcheck_morning" onclick="IDcheck_morning()" class="btn-IDcheck">IDを確認</button></td>
             </form>
         </tr>
         <tr>
